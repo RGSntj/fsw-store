@@ -6,5 +6,5 @@ import Image from "next/image";
 export default function Home() {
   const { data } = useSession();
 
-  return <div></div>;
+  return <div>Hello World !</div>;
 }
