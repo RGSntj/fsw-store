@@ -12,4 +12,16 @@ export class ProductUseCase {
 
     return productsWithDeals;
   }
+
+  async productWithDealsBySlug(slug: "mouses" | "keyboards") {
+    const products = await prismaClient.product.findMany({
+      where: {
+        category: {
+          slug,
+        },
+      },
+    });
+
+    return products;
+  }
 }
