@@ -120,9 +120,11 @@ export const Header = () => {
         </SheetContent>
       </Sheet>
 
-      <h2 className="text-lg font-semibold">
-        <span className="text-primary">FSW</span> Store
-      </h2>
+      <Link href="/">
+        <h2 className="text-lg font-semibold">
+          <span className="text-primary">FSW</span> Store
+        </h2>
+      </Link>
 
       <Button size="icon" variant="outline">
         <ShoppingCartIcon />
