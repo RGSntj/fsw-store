@@ -1,7 +1,7 @@
 import { Categories } from "./components/categories";
 import { ProductUseCase } from "@/use-cases/products";
 import { ProductList } from "../../components/ui/product-list";
-import { SectionTitle } from "./components/section-title";
+import { SectionTitle } from "../../components/ui/section-title";
 import { PromoBanner } from "./components/promo-banner";
 
 export default async function Home() {
