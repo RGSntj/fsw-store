@@ -1,6 +1,6 @@
 import { Categories } from "./components/categories";
 import { ProductUseCase } from "@/use-cases/products";
-import { ProductList } from "./components/product-list";
+import { ProductList } from "../../components/ui/product-list";
 import { SectionTitle } from "./components/section-title";
 import { PromoBanner } from "./components/promo-banner";
 
