@@ -1,28 +1,21 @@
 "use client";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 
 import { ProductWithTotalPrice } from "@/helpers/product";
 import { ArrowLeftIcon, ArrowRightIcon, TruckIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { DiscountBadge } from "@/components/ui/discount-badge";
 import { CartContext } from "@/providers/cart";
+import { useCountQuantity } from "@/hoocks/useCountQuantity";
 
 interface ProductInfoProps {
   product: ProductWithTotalPrice;
 }
 
 export const ProductInfo = ({ product }: ProductInfoProps) => {
-  const [quantity, setQuantity] = useState<number>(1);
-
   const { addProductsToCart } = useContext(CartContext);
-
-  function handleDecreaseQuantityClick() {
-    setQuantity((prev) => (prev === 1 ? prev : prev - 1));
-  }
-
-  function handleIncreaseQuantityClick() {
-    setQuantity((prev) => prev + 1);
-  }
+  const { quantity, handleDecreaseQuantityClick, handleIncreaseQuantityClick } =
+    useCountQuantity();
 
   function handleAddToCartClick() {
     addProductsToCart({ ...product, quantity });
